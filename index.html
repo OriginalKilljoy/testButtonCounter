@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .button{
+            height: 50px;
+            width: 200px;
+            border: 1px solid black;
+            background-color: aliceblue;
+            font-size: xx-large;
+            margin: 5px;
+        }
+
+        .counter{
+            height: 50px;
+            width: 50px;
+            border: 1px solid black;
+            background-color: aliceblue;
+            font-size: x-large;
+            margin: 5px;
+        }
+
+        .main{
+            display: flex;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div onclick="resetCounter()" class="button">Litterbox</div>
+        <div id="timer" class="counter" onclick="counter()"></div>
+    </div>
+
+<script>
+
+    let timer = document.getElementById('timer')
+    let seconds = 0;
+
+    function counter(){
+        setInterval(countSeconds, 500)
+    }
+
+    function countSeconds(){
+        timer.innerHTML = seconds;
+        seconds++;
+    }
+
+    function resetCounter(){
+        clearInterval
+        seconds = 0;
+    }
+
+
+</script>
+
+
+</body>
+</html>
